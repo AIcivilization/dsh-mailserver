@@ -1,0 +1,28 @@
+{
+  "name": "dsh-mailserver",
+  "version": "0.0.1",
+  "description": "Deploy and manage a self-hosted mail server on a VPS from DeepSeek Harness (Postfix, Dovecot, DKIM/SPF/DMARC, MX). 在 VPS 上自建邮箱系统。",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "mailserver",
+    "self-hosted",
+    "postfix",
+    "dovecot",
+    "dkim",
+    "spf",
+    "dmarc",
+    "mx",
+    "vps",
+    "smtp",
+    "自建邮箱",
+    "邮件服务器"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AIcivilization/dsh-mailserver.git"
+  },
+  "homepage": "https://github.com/AIcivilization/dsh-mailserver#readme",
+  "author": "AIcivilization"
+}
