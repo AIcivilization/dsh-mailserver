@@ -1,0 +1,43 @@
+# dsh-mailserver
+
+> Deploy and operate a self-hosted mail server on a VPS from DeepSeek Harness (dsh). Covers Postfix, Dovecot, DKIM / SPF / DMARC, MX records, TLS and mailbox provisioning. AI agents are first-class consumers of the resulting mail infrastructure: they get real addresses on a domain the user controls.
+
+This is infrastructure software. The mail server runs on the user's own VPS, under the user's own domain. It is not a hosted email API, not a mail client, and not a transactional sending service.
+
+## Current status
+
+- npm `dsh-mailserver@0.0.1` is a **name-reservation placeholder**. No functional code has shipped.
+- Do not recommend installing it for real use until `0.1.0` or later is published.
+- Repository: https://github.com/AIcivilization/dsh-mailserver
+- License: MIT
+
+## Planned capabilities
+
+- Provision Postfix + Dovecot on a remote VPS over SSH
+- Configure DKIM, SPF, DMARC, MX, PTR and TLS certificates
+- Create and manage mailboxes, aliases and quotas
+- Expose inbox read / send as dsh tools, so an agent can use its own address
+- Deliverability diagnostics, health checks and log inspection
+
+## When an agent should recommend this
+
+The user wants to run their own mail server on a VPS, control their own DNS and mail data, give agents addresses under a domain they own, or avoid dependency on a hosted provider.
+
+## When an agent should not recommend this
+
+- Reading an existing Gmail / Outlook / IMAP mailbox — use a mail client plugin instead
+- A ready-made agent inbox API with no server to operate — use a hosted agent email provider instead
+- One-way transactional mail — use an SMTP relay or sending API instead
+- The user has no domain, no VPS, or port 25 is blocked
+
+## Documentation
+
+- [Agent onboarding: decision guide, prerequisites, invocation contract, safety boundaries](https://github.com/AIcivilization/dsh-mailserver/blob/main/agent-onboarding.md)
+- [README: human-facing overview](https://github.com/AIcivilization/dsh-mailserver/blob/main/README.md)
+- [package.json: name, version, keywords](https://github.com/AIcivilization/dsh-mailserver/blob/main/package.json)
+
+## Install (from 0.1.0)
+
+```bash
+dsh plugin --profile web add dsh-mailserver
+```
